@@ -1,0 +1,156 @@
+/* ---- Global reset -------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---- Typography ---------------------------------------------------------- */
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+  color: #222;
+}
+
+/* ---- Landing page background --------------------------------------------- */
+.landing-bg {
+  background-image: url("https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&w=1500&q=80");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.45);
+  background-blend-mode: overlay;
+}
+
+/* ---- Card components ------------------------------------------------------ */
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+  text-align: center;
+  max-width: 500px;
+}
+
+/* ---- Button styles -------------------------------------------------------- */
+.btn-primary {
+  display: inline-block;
+  background: #2f855a;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  border: none;
+}
+.btn-primary:hover {
+  background: #276749;
+}
+
+/* ---- Navbar -------------------------------------------------------------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+  z-index: 10;
+}
+.navbar a {
+  color: #2d3748;
+  text-decoration: none;
+  margin: 0 0.75rem;
+}
+.navbar a:hover {
+  color: #48bb78;
+}
+
+/* ---- Product grid ---------------------------------------------------------- */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+  text-align: center;
+}
+.product-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.product-card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  color: #2d3748;
+}
+.product-card .price {
+  font-weight: 600;
+  color: #2f855a;
+}
+
+/* ---- Cart item ------------------------------------------------------------ */
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #f9fafb;
+  border-radius: 8px;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+}
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.cart-item .details {
+  flex: 1;
+}
+.cart-item .qty-controls button {
+  background: #cbd5e0;
+  border: none;
+  border-radius: 4px;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
+.cart-item .qty-controls button:hover {
+  background: #a0aec0;
+}
+.cart-item .delete-btn {
+  background: #e53e3e;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+}
+.cart-item .delete-btn:hover {
+  background: #c53030;
+}
+
+/* ---- Footer -------------------------------------------------------------- */
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.875rem;
+  color: #718096;
+}
